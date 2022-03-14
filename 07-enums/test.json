@@ -1,0 +1,19 @@
+// request
+{
+	"topicId": 5,
+	"status": "published" // "draft", "deleted"
+}
+
+// response
+[
+	{
+		"question": "How are you?",
+		"answer": "Fine!",
+		"tags": [
+			"popular",
+			"new"
+		],
+		"likes": 3,
+		"status": "published"
+	}
+]
