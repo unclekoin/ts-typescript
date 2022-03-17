@@ -21,7 +21,7 @@ function action(status: StatusCode) { }
 
 action(StatusCode.SUCCESS);
 
-const enum Roles {
+enum Roles {
   ADMIN = 1,
   USER = 2,
 }
