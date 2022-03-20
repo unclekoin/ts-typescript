@@ -44,3 +44,19 @@ function get(): IResponseSuccess | IResponseFailed {
     },
   };
 }
+
+type f = (res: IResponseSuccess | IResponseFailed) => number;
+
+type Res = IResponseSuccess | IResponseFailed;
+
+function isSuccess(res: Res): res is IResponseSuccess {
+  return res.status === PaymentStatus.Success;
+}
+
+function getIdFromData(res: Res): number {
+  if (isSuccess(res)) {
+    return res.data.databaseId;
+  }
+
+  throw new Error(res.data.errorMessage);
+}
