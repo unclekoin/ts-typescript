@@ -1,4 +1,4 @@
-function logId(id: string | number | boolean) {
+function logId1(id: string | number | boolean) {
   if (typeof id === 'string') {
     console.log(id.toLowerCase());
   } else if (typeof id === 'number') {
